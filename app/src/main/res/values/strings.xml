@@ -1,5 +1,24 @@
 <resources>
-    <string name="app_name">AndroidLabs1</string>
+    <string name="app_name">AndroidLabs2</string>
     <string name="hello_message">Hello World!!!</string>
     <string name="ButtonText">I\’m a button</string>
+    <string name="LoginText">Login</string>
+    <string name="LoginHintText">Login name</string>
+    <string name="PasswordText">Password</string>
+    <string name="PasswordHintText">password</string>
+
+    <string name="wtdo">What does this do?</string>
+    <string name="switchText">Switch</string>
+    <string name="checkText">Check</string>
+
+    <string name="confirm_message">Confirm</string>
+    <string name="dialog_message">Are you sure?</string>
+    <string name="yes_button">YES</string>
+    <string name="no_button">NO</string>
+
+    <string name="swON">Switch is on</string>
+    <string name="swOFF">Switch is off</string>
+
+    <string name="response">Here is my response</string>
+
 </resources>

@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">AndroidLabs1</string>
+    <string name="app_name">Le AndroidLabs2</string>
     <string name="hello_message">Bonjour le monde !!!</string>
     <string name="ButtonText">Un Bouton</string>
+
+    <string name="LoginText">Connexion</string>
+    <string name="LoginHintText">Entrez le login</string>
+    <string name="PasswordText">Mot de passe</string>
+    <string name="PasswordHintText">passe actuel</string>
+
+    <string name="wtdo">What the, pardon my french</string>
+    <string name="switchText">Le switch</string>
+    <string name="checkText">Le checkbox</string>
+
+    <string name="confirm_message">Confirmer</string>
+    <string name="dialog_message">Êtes-vous sûr?</string>
+    <string name="yes_button">Oui</string>
+    <string name="no_button">Non</string>
+
+    <string name="swON">l\'interrupteur est allumé</string>
+    <string name="swOFF">est éteint</string>
+
+    <string name="response">Voici ma réponse</string>
+
 </resources>
