@@ -1,8 +1,7 @@
-package com.example.robin.androidlabs1
+package com.example.robin.androidlab
 
 import android.app.Activity
 import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Intent
 import android.graphics.Bitmap
 import android.os.Bundle
@@ -11,9 +10,6 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_list_items.*
-import java.util.concurrent.atomic.AtomicInteger
-import android.content.DialogInterface
-
 
 
 class ListItemsActivity : Activity() {

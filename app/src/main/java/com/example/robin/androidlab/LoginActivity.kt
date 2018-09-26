@@ -1,4 +1,4 @@
-package com.example.robin.androidlabs1
+package com.example.robin.androidlab
 
 import android.app.Activity
 import android.content.Context
