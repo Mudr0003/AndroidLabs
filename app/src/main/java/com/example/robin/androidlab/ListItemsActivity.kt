@@ -28,14 +28,19 @@ class ListItemsActivity : Activity() {
         imageButText?.setOnClickListener( View.OnClickListener
         {
 
+
+
+
             // create an Intent to go to the Activity InformationActivity:
 
-             Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
-                    takePictureIntent.resolveActivity(packageManager)?.also {
-                        startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE)
+                 Intent(MediaStore.ACTION_IMAGE_CAPTURE).also { takePictureIntent ->
+                     takePictureIntent.resolveActivity(packageManager)?.also {
+                         startActivityForResult(takePictureIntent, 1)
 
-                    }
+                     }
                  }
+
+
 
         })
 
@@ -103,11 +108,24 @@ class ListItemsActivity : Activity() {
             val imageBitmap = data.extras.get("data") as Bitmap
             imageButton?.setImageBitmap(imageBitmap)
         }
+       // super.onActivityResult(requestCode, resultCode, data)
     }
 
     override fun onResume(){
         super.onResume() //run the system code then run our custom code
+        //add a switch changed handler:
+        switchText?.setOnCheckedChangeListener{_ , isChecked ->
 
+            if (isChecked) {
+                // The switch is enabled/checked
+                Toast.makeText(this, R.string.swON, Toast.LENGTH_SHORT).show()
+
+            } else {
+                // The switch is disabled
+                Toast.makeText(this, R.string.swOFF, Toast.LENGTH_LONG).show()
+            }
+
+        }
         Log.i(ACTIVITYNAME, "In onResume()");
     }
 
@@ -115,6 +133,8 @@ class ListItemsActivity : Activity() {
         super.onStart() //run the system code then run our custom code
 
         Log.i(ACTIVITYNAME, "In onStart()");
+       // setContentView(R.layout.activity_list_items)
+
     }
 
     override fun onPause(){
