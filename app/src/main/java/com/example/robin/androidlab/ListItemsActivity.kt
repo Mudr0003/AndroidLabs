@@ -20,16 +20,12 @@ class ListItemsActivity : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState) //run the system code then run our custom code
 
-        Log.i(ACTIVITYNAME, "In onCreate()");
+        Log.i(ACTIVITYNAME, "In onCreate()")
         setContentView(R.layout.activity_list_items)
 
 
         //add a click handler:
-        imageButText?.setOnClickListener( View.OnClickListener
-        {
-
-
-
+        imageButText?.setOnClickListener{
 
             // create an Intent to go to the Activity InformationActivity:
 
@@ -40,9 +36,7 @@ class ListItemsActivity : Activity() {
                      }
                  }
 
-
-
-        })
+        }
 
 
         //add a switch changed handler:
@@ -97,7 +91,7 @@ class ListItemsActivity : Activity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         super.onActivityResult(requestCode, resultCode, data)
-        Log.i(ACTIVITYNAME, "In onActivityResult()");
+        Log.i(ACTIVITYNAME, "In onActivityResult()")
 
         setContentView(R.layout.activity_list_items)
 
@@ -108,7 +102,7 @@ class ListItemsActivity : Activity() {
             val imageBitmap = data.extras.get("data") as Bitmap
             imageButton?.setImageBitmap(imageBitmap)
         }
-       // super.onActivityResult(requestCode, resultCode, data)
+
     }
 
     override fun onResume(){
@@ -126,33 +120,34 @@ class ListItemsActivity : Activity() {
             }
 
         }
-        Log.i(ACTIVITYNAME, "In onResume()");
+        Log.i(ACTIVITYNAME, "In onResume()")
     }
 
     override fun onStart(){
         super.onStart() //run the system code then run our custom code
 
-        Log.i(ACTIVITYNAME, "In onStart()");
-       // setContentView(R.layout.activity_list_items)
+        Log.i(ACTIVITYNAME, "In onStart()")
+
 
     }
 
     override fun onPause(){
         super.onPause() //run the system code then run our custom code
 
-        Log.i(ACTIVITYNAME, "In onPause()");
+        Log.i(ACTIVITYNAME, "In onPause()")
+
     }
 
     override fun onStop(){
         super.onStop()  //run the system code then run our custom code
 
-        Log.i(ACTIVITYNAME, "In onStop()");
+        Log.i(ACTIVITYNAME, "In onStop()")
     }
 
     override fun onDestroy(){
         super.onDestroy()  //run the system code then run our custom code
 
-        Log.i(ACTIVITYNAME, "In onDestroy()");
+        Log.i(ACTIVITYNAME, "In onDestroy()")
     }
 
 

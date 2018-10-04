@@ -2,35 +2,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.robin.androidlab">
 
-    <uses-feature android:name="android.hardware.camera"
+    <uses-feature
+        android:name="android.hardware.camera"
         android:required="true" />
 
     <application
-        android:largeHeap="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:largeHeap="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.robin.androidlab.StartActivity">
-
+        <activity android:name=".StartActivity" android:parentActivityName=".LoginActivity">
         </activity>
-        <activity android:name="com.example.robin.androidlab.LoginActivity">
-
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
-        <activity android:name="com.example.robin.androidlab.ListItemsActivity">
-
-
-
-        </activity>
+        <activity android:name=".ListItemsActivity" android:parentActivityName=".StartActivity"></activity>
+        <activity
+            android:name=".ChatWindow"
+            android:label="@string/title_activity_chat_window" android:parentActivityName=".StartActivity"></activity>
     </application>
 
 </manifest>

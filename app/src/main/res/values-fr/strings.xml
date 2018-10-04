@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Le AndroidLabs2</string>
+    <string name="app_name">Le AndroidLab4</string>
     <string name="hello_message">Bonjour le monde !!!</string>
     <string name="ButtonText">Un Bouton</string>
 
@@ -21,6 +21,8 @@
     <string name="swON">l\'interrupteur est allumé</string>
     <string name="swOFF">est éteint</string>
 
+    <string name="title_activity_chat_window">Le Chat</string>
     <string name="response">Voici ma réponse</string>
-
+    <string name="ChatButtonText">Démarrer la Discussion</string>
+    <string name="SendText">Envoyer</string>
 </resources>
