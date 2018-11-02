@@ -50,6 +50,32 @@ class StartActivity : Activity() {
 
         }
 
+
+
+        var Weatherbutton = findViewById<Button>(R.id.weather_button)
+
+        //add a chat button handler:
+        Weatherbutton.setOnClickListener{
+            Log.i(ACTIVITYNAME, "User clicked Weather Button")
+
+
+            val newActivity = Intent( this, WeatherForecast::class.java)
+
+            //transition to new activity
+
+            startActivity(newActivity)
+
+        }
+
+
+
+
+
+
+
+
+
+
     }
 
 
