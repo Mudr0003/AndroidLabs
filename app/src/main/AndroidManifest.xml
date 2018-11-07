@@ -4,9 +4,9 @@
 
     <uses-feature
         android:name="android.hardware.camera"
-
-
         android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +18,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".StartActivity"
-            android:parentActivityName=".LoginActivity"></activity>
+            android:parentActivityName=".LoginActivity" />
         <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,7 +33,8 @@
             android:name=".ChatWindow"
             android:label="@string/title_activity_chat_window"
             android:parentActivityName=".StartActivity" />
-        <activity android:name=".WeatherForecast"></activity>
+        <activity android:name=".WeatherForecast" />
+        <activity android:name="com.example.robin.lab7.MessageDetails"></activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
+
 </manifest>

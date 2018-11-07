@@ -10,6 +10,9 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import kotlinx.android.synthetic.main.activity_list_items.*
+import android.R.attr.data
+
+
 
 
 class ListItemsActivity : Activity() {
@@ -99,8 +102,15 @@ class ListItemsActivity : Activity() {
         var imageButton = findViewById(R.id.imageButText) as? ImageButton
 
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-            val imageBitmap = data.extras.get("data") as Bitmap
-            imageButton?.setImageBitmap(imageBitmap)
+
+            val extras = data.extras
+            val imageBitmap = extras.get("data") as Bitmap
+           // val mImageView = ImageView(this)
+           // mImageView.setImageBitmap(imageBitmap)
+           imageButton?.setImageBitmap(imageBitmap)
+
+           // val imageBitmap = data.extras.get("data") as Bitmap
+          //  imageButton?.setImageBitmap(imageBitmap)
         }
 
     }

@@ -27,7 +27,7 @@ class WeatherForecast : Activity() {
 
     val ACTIVITYNAME = "WeatherForecast.kt"
 
-    val cityname = "Montreal"
+    val cityname = "Ottawa"
 
     var windValue : String = ""
     var tempValue : String = ""
@@ -48,6 +48,7 @@ class WeatherForecast : Activity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_weather_forecast)
+        Log.i(ACTIVITYNAME, "oncreate")
 
         image = findViewById<ImageView>(R.id.current_weather)
 
@@ -87,6 +88,8 @@ class WeatherForecast : Activity() {
 
         fun getImage(url: URL): Bitmap? {
             var connection: HttpURLConnection? = null
+            Log.i(ACTIVITYNAME, "getImage")
+
             try {
                 connection = url.openConnection() as HttpURLConnection
                 connection.connect()
