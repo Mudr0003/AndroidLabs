@@ -20,11 +20,19 @@
             android:name=".StartActivity"
             android:parentActivityName=".LoginActivity" />
         <activity android:name=".LoginActivity">
+
+
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
+
+
+
         </activity>
         <activity
             android:name=".ListItemsActivity"
@@ -34,7 +42,17 @@
             android:label="@string/title_activity_chat_window"
             android:parentActivityName=".StartActivity" />
         <activity android:name=".WeatherForecast" />
-        <activity android:name="com.example.robin.lab7.MessageDetails"></activity>
+        <activity android:name="com.example.robin.lab7.MessageDetails" />
+        <activity android:name=".TestToolbar">
+
+
+
+
+            android:name=".TestToolbar"
+            android:parentActivityName=".StartActivity"
+
+
+        </activity>
     </application>
 
 </manifest>

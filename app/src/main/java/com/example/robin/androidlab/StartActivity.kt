@@ -69,7 +69,20 @@ class StartActivity : Activity() {
 
 
 
+        var toolbarbutton = findViewById<Button>(R.id.toolbar_button)
 
+        //add a menu button handler:
+        toolbarbutton.setOnClickListener{
+            Log.i(ACTIVITYNAME, "User clicked toolbar Button")
+
+
+            val newActivity = Intent( this, TestToolbar::class.java)
+
+            //transition to new activity
+
+            startActivity(newActivity)
+
+        }
 
 
 
