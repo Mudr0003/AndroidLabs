@@ -26,6 +26,9 @@ class ListItemsActivity : Activity() {
         Log.i(ACTIVITYNAME, "In onCreate()")
         setContentView(R.layout.activity_list_items)
 
+        val resultIntent = Intent( )
+        resultIntent.putExtra("Response","my default response")
+        setResult(Activity.RESULT_OK, resultIntent)
 
         //add a click handler:
         imageButText?.setOnClickListener{
@@ -70,7 +73,7 @@ class ListItemsActivity : Activity() {
 
                 dialog.dismiss()
 
-                val resultIntent = Intent( )
+              //  val resultIntent = Intent( )
 
                 //var resp = R.string.response
                 resultIntent.putExtra("Response","This is my response")
@@ -89,8 +92,17 @@ class ListItemsActivity : Activity() {
 
         }
 
+        Log.i(ACTIVITYNAME, "exiting onCreate()")
+
 
     }
+
+    override fun onBackPressed() {
+        super.onBackPressed()
+        Log.i(ACTIVITYNAME, "back pressed")
+
+    }
+
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         super.onActivityResult(requestCode, resultCode, data)
@@ -99,10 +111,10 @@ class ListItemsActivity : Activity() {
         setContentView(R.layout.activity_list_items)
 
         //val imageButton = ImageButton(this)
-        var imageButton = findViewById(R.id.imageButText) as? ImageButton
+        val imageButton = findViewById(R.id.imageButText) as? ImageButton
 
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
-
+            Log.i(ACTIVITYNAME, "checking request code........()")
             val extras = data.extras
             val imageBitmap = extras.get("data") as Bitmap
            // val mImageView = ImageView(this)
@@ -117,6 +129,7 @@ class ListItemsActivity : Activity() {
 
     override fun onResume(){
         super.onResume() //run the system code then run our custom code
+        Log.i(ACTIVITYNAME, "In onResume()")
         //add a switch changed handler:
         switchText?.setOnCheckedChangeListener{_ , isChecked ->
 

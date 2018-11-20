@@ -30,9 +30,6 @@
             </intent-filter>
 
 
-
-
-
         </activity>
         <activity
             android:name=".ListItemsActivity"
@@ -45,14 +42,7 @@
         <activity android:name="com.example.robin.lab7.MessageDetails" />
         <activity android:name=".TestToolbar">
 
-
-
-
-            android:name=".TestToolbar"
-            android:parentActivityName=".StartActivity"
-
-
-        </activity>
+            </activity>
     </application>
 
 </manifest>
