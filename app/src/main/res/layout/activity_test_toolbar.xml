@@ -11,12 +11,66 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
     </android.support.v7.widget.Toolbar>
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Show Snackbar"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:id="@+id/snackbar_button"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show Snackbar"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/snackbar_button"/>
+
+
+    <android.support.v4.widget.DrawerLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        android:layout_below="@id/lab8_toolbar"
+        android:id="@+id/drawer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text One" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Text Two" />
+
+        </LinearLayout>
+
+            <android.support.design.widget.NavigationView
+                android:layout_width="200dp"
+                android:layout_height="400dp"
+                android:layout_gravity="start"
+                app:headerLayout="@layout/nav_header"
+                android:fitsSystemWindows="true"
+                android:id="@+id/navmenu"
+                app:menu="@menu/drawer_view">
+
+            </android.support.design.widget.NavigationView>
+
+
+
+
+
+
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+
 
 </RelativeLayout>

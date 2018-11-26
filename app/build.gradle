@@ -21,9 +21,6 @@ android {
         }
     }
     buildToolsVersion '28.0.2'
-    dexOptions {
-        incremental false
-    }
 }
 
 dependencies {
