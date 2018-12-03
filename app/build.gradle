@@ -8,7 +8,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.robin.androidlabs1"
-        minSdkVersion 22
+        minSdkVersion 26
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"
@@ -21,6 +21,8 @@ android {
         }
     }
     buildToolsVersion '28.0.2'
+    productFlavors {
+    }
 }
 
 dependencies {
