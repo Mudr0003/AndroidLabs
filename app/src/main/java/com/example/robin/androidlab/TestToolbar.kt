@@ -38,12 +38,12 @@ class TestToolbar : AppCompatActivity(),NavigationView.OnNavigationItemSelectedL
         setContentView(R.layout.activity_test_toolbar)
 
 
-        var lab8_toolbar = findViewById<Toolbar>(R.id.lab8_toolbar);
-        setSupportActionBar(lab8_toolbar);
-        var drawer = findViewById<DrawerLayout>(R.id.drawer);
-        var toggle = ActionBarDrawerToggle(this,drawer,lab8_toolbar,R.string.open,R.string.close);
-        drawer.addDrawerListener(toggle);
-        toggle.syncState();
+        val lab8_toolbar = findViewById<Toolbar>(R.id.lab8_toolbar)
+        setSupportActionBar(lab8_toolbar)
+        val drawer = findViewById<DrawerLayout>(R.id.drawer)
+        val toggle = ActionBarDrawerToggle(this,drawer,lab8_toolbar,R.string.open,R.string.close)
+        drawer.addDrawerListener(toggle)
+        toggle.syncState()
 
 
         val name = "Channel_name"
@@ -70,9 +70,9 @@ class TestToolbar : AppCompatActivity(),NavigationView.OnNavigationItemSelectedL
 
         //var mydrawer = findViewById<DrawerLayout>(R.id.drawer)
 
-        val mynavigation= findViewById<NavigationView>(R.id.navmenu);
+        val mynavigation= findViewById<NavigationView>(R.id.navmenu)
 
-        mynavigation.setNavigationItemSelectedListener(this);
+        mynavigation.setNavigationItemSelectedListener(this)
        // mynavigation.setNavigationItemSelectedListener { menuItem ->
 
            // menuItem.isChecked = true
@@ -102,9 +102,9 @@ class TestToolbar : AppCompatActivity(),NavigationView.OnNavigationItemSelectedL
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
-        menuInflater.inflate(R.menu.toolbar_menu, menu);
+        menuInflater.inflate(R.menu.toolbar_menu, menu)
 
-        return true;
+        return true
 
     }
 
@@ -116,10 +116,10 @@ class TestToolbar : AppCompatActivity(),NavigationView.OnNavigationItemSelectedL
                 Snackbar.make(snackButton, response, Snackbar.LENGTH_LONG).show()
             }
             R.id.action_two -> {
-                var dialogStuff = layoutInflater.inflate(R.layout.dialog_stuff,null)
-                var editText = dialogStuff.findViewById<EditText>(R.id.new_message)
+                val dialogStuff = layoutInflater.inflate(R.layout.dialog_stuff,null)
+                val editText = dialogStuff.findViewById<EditText>(R.id.new_message)
 
-                var builder = AlertDialog.Builder(this);
+                val builder = AlertDialog.Builder(this)
 
                 builder.setTitle("Do you want to go back?")
 
@@ -132,17 +132,17 @@ class TestToolbar : AppCompatActivity(),NavigationView.OnNavigationItemSelectedL
                 builder.setNegativeButton("Cancel",null)
 
                 // Create the AlertDialog
-                var dialog = builder.create()
-                dialog.show();
+                val dialog = builder.create()
+                dialog.show()
 
 
             }
             R.id.action_three -> {
 
-                var dialogStuff = layoutInflater.inflate(R.layout.dialog_stuff,null)
-                var editText = dialogStuff.findViewById<EditText>(R.id.new_message)
+                val dialogStuff = layoutInflater.inflate(R.layout.dialog_stuff,null)
+                val editText = dialogStuff.findViewById<EditText>(R.id.new_message)
 
-                var builder = AlertDialog.Builder(this);
+                val builder = AlertDialog.Builder(this)
                 builder.setView(dialogStuff)
                 builder.setTitle("Set New Message")
 
@@ -153,8 +153,8 @@ class TestToolbar : AppCompatActivity(),NavigationView.OnNavigationItemSelectedL
                 builder.setNegativeButton("Cancel",null)
 
                 // Create the AlertDialog
-                var dialog = builder.create()
-                dialog.show();
+                val dialog = builder.create()
+                dialog.show()
 
 
 
@@ -170,34 +170,34 @@ class TestToolbar : AppCompatActivity(),NavigationView.OnNavigationItemSelectedL
 
 
         }
-        return true;
+        return true
     }
 
 
      override fun onNavigationItemSelected(item: MenuItem):Boolean{
 
-        var id = item.itemId
+        val id = item.itemId
         when (id)
         {
             R.id.chatitem -> {
 
                 Log.i(ACTIVITYNAME, "menu Start Chat")
 
-                var mBuilder = NotificationCompat.Builder(this, "Channel_name")
+                val mBuilder = NotificationCompat.Builder(this, "Channel_name")
                         .setSmallIcon(R.drawable.dog)
                         .setAutoCancel(true)
                         .setContentTitle("My notification")
-                        .setContentText("Hello World!");
+                        .setContentText("Hello World!")
 
                 val newActivity = Intent( this, ChatWindow::class.java)
 
-                var resultPendingIntent = PendingIntent.getActivity( this, 0, newActivity, PendingIntent.FLAG_UPDATE_CURRENT)
-                mBuilder.setContentIntent(resultPendingIntent);
+                val resultPendingIntent = PendingIntent.getActivity( this, 0, newActivity, PendingIntent.FLAG_UPDATE_CURRENT)
+                mBuilder.setContentIntent(resultPendingIntent)
                 //transition to new activity
 
                 val mNotificationId = 1
                 val mNotifyMgr = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-                mNotifyMgr !!.notify(mNotificationId, mBuilder.build())
+                mNotifyMgr.notify(mNotificationId, mBuilder.build())
                 //startActivity(newActivity)
 
 
@@ -212,21 +212,21 @@ class TestToolbar : AppCompatActivity(),NavigationView.OnNavigationItemSelectedL
 
                 Log.i(ACTIVITYNAME, "menu Start Chat")
 
-                var mBuilder = NotificationCompat.Builder(this, "Channel_name")
+                val mBuilder = NotificationCompat.Builder(this, "Channel_name")
                         .setSmallIcon(R.drawable.frog)
                         .setAutoCancel(true)
                         .setContentTitle("My notification")
-                        .setContentText("Hello World!");
+                        .setContentText("Hello World!")
 
-                val newActivity = Intent( this, ChatWindow::class.java)
+                //val newActivity = Intent( this, ChatWindow::class.java)
 
-                var resultPendingIntent = PendingIntent.getActivity( this, 0, newListActivity, PendingIntent.FLAG_UPDATE_CURRENT)
-                mBuilder.setContentIntent(resultPendingIntent);
+                val resultPendingIntent = PendingIntent.getActivity( this, 0, newListActivity, PendingIntent.FLAG_UPDATE_CURRENT)
+                mBuilder.setContentIntent(resultPendingIntent)
                 //transition to new activity
 
                 val mNotificationId = 2
                 val mNotifyMgr = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-                mNotifyMgr !!.notify(mNotificationId, mBuilder.build())
+                mNotifyMgr.notify(mNotificationId, mBuilder.build())
             }
 
             R.id.contactitem -> {
@@ -235,29 +235,29 @@ class TestToolbar : AppCompatActivity(),NavigationView.OnNavigationItemSelectedL
 
                 // create an Intent to go to the Activity InformationActivity:
 
-                var emailintent = Intent(Intent.ACTION_SENDTO)
-                var emailPendingIntent = PendingIntent.getActivity( this, 0, emailintent, PendingIntent.FLAG_UPDATE_CURRENT)
+                val emailintent = Intent(Intent.ACTION_SENDTO)
+                val emailPendingIntent = PendingIntent.getActivity( this, 0, emailintent, PendingIntent.FLAG_UPDATE_CURRENT)
 
 
-                emailintent.setData(Uri.parse("mailto:nobody@nowhere.com"));
+                emailintent.setData(Uri.parse("mailto:nobody@nowhere.com"))
 
                // startActivity(emailintent)
 
 
-                var txtintent = Intent(Intent.ACTION_VIEW, Uri.parse("sms:"))
-                var txtPendingIntent = PendingIntent.getActivity( this, 0, txtintent, PendingIntent.FLAG_UPDATE_CURRENT)
+                val txtintent = Intent(Intent.ACTION_VIEW, Uri.parse("sms:"))
+                val txtPendingIntent = PendingIntent.getActivity( this, 0, txtintent, PendingIntent.FLAG_UPDATE_CURRENT)
 
                 txtintent.type="text/plain"
-                txtintent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+                txtintent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.")
                // startActivity(Intent.createChooser(txtintent,getString(R.string.send_to)))
                // startActivity(Intent.createChooser(txtintent,"hello"))
 
 
-                val newListActivity = Intent( this, ListItemsActivity::class.java)
+                //val newListActivity = Intent( this, ListItemsActivity::class.java)
 
                 Log.i(ACTIVITYNAME, "menu Start Chat")
 
-                var mBuilder = NotificationCompat.Builder(this, "Channel_name")
+                val mBuilder = NotificationCompat.Builder(this, "Channel_name")
                         .setSmallIcon(R.drawable.hotdog)
                         .setAutoCancel(true)
                         .setContentTitle("My notification")
@@ -268,7 +268,7 @@ class TestToolbar : AppCompatActivity(),NavigationView.OnNavigationItemSelectedL
 
                 val mNotificationId = 3
                 val mNotifyMgr = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
-                mNotifyMgr !!.notify(mNotificationId, mBuilder.build())
+                mNotifyMgr.notify(mNotificationId, mBuilder.build())
 
               //  startActivity(emailintent)
               //  startActivity(txtintent)
